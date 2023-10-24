@@ -1,2 +1,2 @@
 # stickgame
-Beat this game and I will paypal you €50
+Beat this game and I will PayPal you €50
