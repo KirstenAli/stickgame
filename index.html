@@ -158,15 +158,16 @@
 
     function play(game){
 
-        if(game.matchBox.length<=2)
-            endScreenModal.show();
-
         if(game.matchesClicked ===2){
             game.matchBox.pop();
 
         } else {
             game.matchBox.splice(-2);
         }
+
+        if(game.matchBox.length===0)
+            endScreenModal.show();
+
         game.matchesClicked =0;
     }
 
