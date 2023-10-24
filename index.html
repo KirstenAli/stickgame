@@ -80,7 +80,6 @@
     </div>
 </div>
 
-
 <div class="modal fade" id="endScreenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content bg-dark text-danger">
@@ -119,16 +118,14 @@
 
         methods: {
             removeMatchStick(){
-
                 if(this.game.matchesClicked <2){
 
                     this.game.matchesClicked++;
 
-                    clearTimeout(this.game.timer);
-
-                    this.game.timer = setTimeout(()=>{
-                        play(this.game);
-                    }, 3000);
+                    if(!this.game.timer)
+                        this.game.timer = setTimeout(()=>{
+                            play(this.game);
+                        }, 3000);
 
                     this.game.matchBox.pop();
                 }
@@ -168,6 +165,7 @@
         if(game.matchBox.length===0)
             endScreenModal.show();
 
+        game.timer = undefined;
         game.matchesClicked =0;
     }
 
