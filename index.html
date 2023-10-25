@@ -53,12 +53,12 @@
 
                     this.game.matchesClicked++;
 
+                    this.game.matchBox.pop();
+
                     if(!this.game.timer)
                         this.game.timer = setTimeout(()=>{
                             play(this.game);
                         }, 3000);
-
-                    this.game.matchBox.pop();
                 }
             },
 
