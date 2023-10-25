@@ -1,5 +1,5 @@
 const endScreenTemplate =
-    `<div class="modal fade" id="endScreenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">\n' +
+    `<div class="modal fade" id="endScreenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-danger">
                 <div class="modal-header">
