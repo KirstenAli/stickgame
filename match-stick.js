@@ -5,6 +5,20 @@ function generateMatchBox(matchBox){
         matchBox.push(i);
 }
 
+function playerTurn(game){
+    if(game.matchesClicked <2){
+
+        game.matchesClicked++;
+
+        game.matchBox.pop();
+
+        if(!game.timer)
+            game.timer = setTimeout(()=>{
+                play(game);
+            }, 3000);
+    }
+}
+
 function play(game){
 
     if(game.matchesClicked ===2){

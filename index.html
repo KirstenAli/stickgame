@@ -11,7 +11,7 @@
 
     <game v-if="game.playClicked"
           :game="game"
-          :remove-match-stick="removeMatchStick">
+          :match-stick-clicked="matchStickClicked">
     </game>
 
     <start-screen v-else
@@ -48,18 +48,8 @@
         },
 
         methods: {
-            removeMatchStick(){
-                if(this.game.matchesClicked <2){
-
-                    this.game.matchesClicked++;
-
-                    this.game.matchBox.pop();
-
-                    if(!this.game.timer)
-                        this.game.timer = setTimeout(()=>{
-                            play(this.game);
-                        }, 3000);
-                }
+            matchStickClicked(){
+                playerTurn(this.game);
             },
 
             reload(){
@@ -79,7 +69,7 @@
 
     app.component('game', {
         template: gameTemplate,
-        props:['game', 'removeMatchStick']
+        props:['game', 'matchStickClicked']
     });
 
     app.component('end-screen', {
