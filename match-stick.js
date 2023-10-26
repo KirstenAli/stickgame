@@ -1,5 +1,5 @@
 function generateMatchBox(matchBox){
-    const randomNum = generateRandomNumber(2,4) *3;
+    const randomNum = generateRandomNumber(2,5) *3;
 
     for (let i=0; i<randomNum; i++)
         matchBox.push(i);
